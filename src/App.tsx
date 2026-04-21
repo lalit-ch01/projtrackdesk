@@ -19,6 +19,19 @@ import UserManagementPage from "./pages/UserManagementPage";
 import DefaultersPage from "./pages/DefaultersPage";
 import ChatbotPage from "./pages/ChatbotPage";
 import AppLayout from "./components/layout/AppLayout";
+import MarketingLayout from "./components/marketing/MarketingLayout";
+import FeaturesPage from "./pages/marketing/FeaturesPage";
+import PricingPage from "./pages/marketing/PricingPage";
+import UseCasesPage from "./pages/marketing/UseCasesPage";
+import ServicesPage from "./pages/marketing/ServicesPage";
+import BlogPage from "./pages/marketing/BlogPage";
+import ResourcesPage from "./pages/marketing/ResourcesPage";
+import ToolsPage from "./pages/marketing/ToolsPage";
+import TestimonialsPage from "./pages/marketing/TestimonialsPage";
+import ResultsPage from "./pages/marketing/ResultsPage";
+import AboutPage from "./pages/marketing/AboutPage";
+import ContactPage from "./pages/marketing/ContactPage";
+import LegalPage from "./pages/marketing/LegalPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,8 +43,28 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          {/* Public marketing site */}
+          <Route element={<MarketingLayout />}>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/use-cases" element={<UseCasesPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPage />} />
+            <Route path="/resources" element={<ResourcesPage />} />
+            <Route path="/tools" element={<ToolsPage />} />
+            <Route path="/testimonials" element={<TestimonialsPage />} />
+            <Route path="/results" element={<ResultsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/legal/:slug" element={<LegalPage />} />
+          </Route>
+
+          {/* Auth */}
           <Route path="/login" element={<LoginPage />} />
+
+          {/* App */}
           <Route path="/app" element={<AppLayout />}>
             <Route index element={<DashboardPage />} />
             <Route path="projects" element={<ProjectsPage />} />
@@ -47,6 +80,7 @@ const App = () => (
             <Route path="defaulters" element={<DefaultersPage />} />
             <Route path="chatbot" element={<ChatbotPage />} />
           </Route>
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
