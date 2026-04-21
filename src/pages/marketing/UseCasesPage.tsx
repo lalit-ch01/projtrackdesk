@@ -66,11 +66,16 @@ const UseCasesPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="mt-6 inline-block">
-                  <Button variant="outline" className="gap-2">
-                    Talk to an expert <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Link to={`/use-cases/${c.id}`}>
+                    <Button className="gradient-primary border-0 gap-2">
+                      Explore {c.title} <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button variant="outline">Talk to an expert</Button>
+                  </Link>
+                </div>
               </div>
               <div className={i % 2 === 1 ? 'lg:order-1' : ''}>
                 <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-primary/10 via-card to-accent/10 p-10 shadow-lg">

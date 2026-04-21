@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Calculator, Shield, FileText, Wrench, ArrowRight, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,10 +9,10 @@ import SectionHeading from '@/components/marketing/SectionHeading';
 import CTASection from '@/components/marketing/CTASection';
 
 const tools = [
-  { id: 'roi', icon: Calculator, title: 'ROI Calculator', desc: 'Estimate hours saved and cost recovered with ProjTrack.' },
-  { id: 'rubric', icon: Shield, title: 'Rubric Builder', desc: 'Quickly draft a rubric with weighted criteria.' },
-  { id: 'templates', icon: FileText, title: 'Project Templates', desc: 'Starter packs for capstone, internship, and research programs.' },
-  { id: 'naming', icon: Wrench, title: 'Project Code Generator', desc: 'Generate consistent project codes for your cohort.' },
+  { id: 'roi', href: '/tools/roi-calculator', icon: Calculator, title: 'ROI Calculator', desc: 'Estimate hours saved and cost recovered with ProjTrack.' },
+  { id: 'rubric', href: '/tools/rubric-builder', icon: Shield, title: 'Rubric Builder', desc: 'Quickly draft a rubric with weighted criteria.' },
+  { id: 'templates', href: '/tools/templates', icon: FileText, title: 'Project Templates', desc: 'Starter packs for capstone, internship, and research programs.' },
+  { id: 'naming', href: '/tools/project-code-generator', icon: Wrench, title: 'Project Code Generator', desc: 'Generate consistent project codes for your cohort.' },
 ];
 
 const ROICalculator = () => {
@@ -114,13 +115,13 @@ const ToolsPage = () => {
           <SectionHeading title="Browse our toolkit" />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {tools.map((t) => (
-              <a key={t.id} href={`#${t.id}`} className="group rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link key={t.id} to={t.href} className="group rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-lg">
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:gradient-primary group-hover:text-primary-foreground">
                   <t.icon className="h-5 w-5" />
                 </span>
                 <h3 className="mt-4 font-display text-base font-semibold text-card-foreground">{t.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{t.desc}</p>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

@@ -64,9 +64,9 @@ const ServicesPage = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/login" className="mt-6 inline-block">
+              <Link to={`/services/${s.id}`} className="mt-6 inline-block">
                 <Button variant="outline" className="gap-2">
-                  Try it free <ArrowRight className="h-4 w-4" />
+                  Learn more <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
             </div>

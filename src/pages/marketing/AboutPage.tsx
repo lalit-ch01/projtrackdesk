@@ -1,4 +1,6 @@
 import { Sparkles, Heart, Globe2, Users2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 import PageHero from '@/components/marketing/PageHero';
 import SectionHeading from '@/components/marketing/SectionHeading';
 import CTASection from '@/components/marketing/CTASection';
@@ -60,9 +62,14 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section id="careers" className="py-16">
+      <section className="py-16">
         <div className="container mx-auto max-w-3xl px-4 text-center lg:px-6">
-          <SectionHeading title="Careers" description="We're hiring across engineering, design, and customer success. Remote-first, India HQ." />
+          <SectionHeading title="More about us" description="Explore careers, press coverage, and partner programs." />
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Link to="/careers"><Button variant="outline">Careers</Button></Link>
+            <Link to="/press"><Button variant="outline">Press</Button></Link>
+            <Link to="/partners"><Button variant="outline">Partners</Button></Link>
+          </div>
         </div>
       </section>
 
