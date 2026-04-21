@@ -24,10 +24,10 @@ const groups = [
 ];
 
 const meta = [
-  { id: 'docs', icon: FileText, title: 'Documentation', desc: 'Setup guides, admin handbooks, and product references.' },
-  { id: 'help', icon: LifeBuoy, title: 'Help Center', desc: 'Searchable FAQs and troubleshooting articles.' },
-  { id: 'integrations', icon: Code2, title: 'Integrations', desc: 'Connect with LMS, SSO, calendar, and storage tools.' },
-  { id: 'security', icon: Shield, title: 'Security & Compliance', desc: 'SOC 2 posture, data handling, and trust resources.' },
+  { id: 'docs', icon: FileText, title: 'Documentation', desc: 'Setup guides, admin handbooks, and product references.', href: '/docs' },
+  { id: 'help', icon: LifeBuoy, title: 'Help Center', desc: 'Searchable FAQs and troubleshooting articles.', href: '/help' },
+  { id: 'integrations', icon: Code2, title: 'Integrations', desc: 'Connect with LMS, SSO, calendar, and storage tools.', href: '/integrations' },
+  { id: 'security', icon: Shield, title: 'Security & Compliance', desc: 'SOC 2 posture, data handling, and trust resources.', href: '/security' },
 ];
 
 const ResourcesPage = () => {
@@ -72,8 +72,7 @@ const ResourcesPage = () => {
             {meta.map((m) => (
               <Link
                 key={m.id}
-                to={`/resources#${m.id}`}
-                id={m.id}
+                to={m.href}
                 className="group rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-lg"
               >
                 <m.icon className="h-6 w-6 text-primary" />

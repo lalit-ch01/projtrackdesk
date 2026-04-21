@@ -25,19 +25,19 @@ const productMenu: MenuSection[] = [
   {
     label: 'Platform',
     items: [
-      { title: 'Features', href: '/features', icon: Sparkles, desc: 'All capabilities at a glance' },
-      { title: 'Workflows', href: '/features#workflows', icon: Layers, desc: 'Project lifecycle automation' },
-      { title: 'Analytics', href: '/features#analytics', icon: BarChart3, desc: 'Real-time insights & reports' },
-      { title: 'AI Assistant', href: '/features#ai', icon: Bot, desc: 'Natural-language queries' },
+      { title: 'Features overview', href: '/features', icon: Sparkles, desc: 'All capabilities at a glance' },
+      { title: 'Workflows', href: '/workflows', icon: Layers, desc: 'Project lifecycle automation' },
+      { title: 'Analytics', href: '/analytics', icon: BarChart3, desc: 'Real-time insights & reports' },
+      { title: 'AI Assistant', href: '/ai-assistant', icon: Bot, desc: 'Natural-language queries' },
     ],
   },
   {
     label: 'Capabilities',
     items: [
-      { title: 'Notifications', href: '/features#notifications', icon: Bell, desc: 'Email + WhatsApp reminders' },
-      { title: 'Rubrics', href: '/features#rubrics', icon: Shield, desc: 'Consistent grading criteria' },
-      { title: 'Integrations', href: '/resources#integrations', icon: Code2, desc: 'Connect your stack' },
-      { title: 'Security', href: '/resources#security', icon: Shield, desc: 'Enterprise-grade trust' },
+      { title: 'Notifications', href: '/notifications', icon: Bell, desc: 'Email + WhatsApp reminders' },
+      { title: 'Rubrics', href: '/rubrics-feature', icon: Shield, desc: 'Consistent grading criteria' },
+      { title: 'Integrations', href: '/integrations', icon: Code2, desc: 'Connect your stack' },
+      { title: 'Security', href: '/security', icon: Shield, desc: 'Enterprise-grade trust' },
     ],
   },
 ];
@@ -46,19 +46,19 @@ const solutionsMenu: MenuSection[] = [
   {
     label: 'By Use Case',
     items: [
-      { title: 'Capstone Projects', href: '/use-cases#capstone', icon: GraduationCap, desc: 'Final-year, multi-phase' },
-      { title: 'Internships', href: '/use-cases#internships', icon: Building2, desc: 'External mentor tracking' },
-      { title: 'Research Labs', href: '/use-cases#research', icon: Lightbulb, desc: 'Long-running studies' },
-      { title: 'Hackathons', href: '/use-cases#hackathons', icon: Sparkles, desc: 'Sprint evaluations' },
+      { title: 'Capstone Projects', href: '/use-cases/capstone', icon: GraduationCap, desc: 'Final-year, multi-phase' },
+      { title: 'Internships', href: '/use-cases/internships', icon: Building2, desc: 'External mentor tracking' },
+      { title: 'Research Labs', href: '/use-cases/research', icon: Lightbulb, desc: 'Long-running studies' },
+      { title: 'Hackathons', href: '/use-cases/hackathons', icon: Sparkles, desc: 'Sprint evaluations' },
     ],
   },
   {
     label: 'By Role',
     items: [
-      { title: 'For Coordinators', href: '/services#coordinators', icon: Users, desc: 'Run programs at scale' },
-      { title: 'For Faculty', href: '/services#faculty', icon: GraduationCap, desc: 'Grade with confidence' },
-      { title: 'For Students', href: '/services#students', icon: BookOpen, desc: 'Stay on track' },
-      { title: 'For HODs', href: '/services#hods', icon: Building2, desc: 'Department-wide visibility' },
+      { title: 'For Coordinators', href: '/services/coordinators', icon: Users, desc: 'Run programs at scale' },
+      { title: 'For Faculty', href: '/services/faculty', icon: GraduationCap, desc: 'Grade with confidence' },
+      { title: 'For Students', href: '/services/students', icon: BookOpen, desc: 'Stay on track' },
+      { title: 'For HODs', href: '/services/hods', icon: Building2, desc: 'Department-wide visibility' },
     ],
   },
 ];
@@ -68,18 +68,18 @@ const resourcesMenu: MenuSection[] = [
     label: 'Learn',
     items: [
       { title: 'Blog', href: '/blog', icon: Newspaper, desc: 'Insights & best practices' },
-      { title: 'Resources', href: '/resources', icon: BookOpen, desc: 'Guides, ebooks, templates' },
-      { title: 'Documentation', href: '/resources#docs', icon: FileText, desc: 'Technical reference' },
-      { title: 'Help Center', href: '/resources#help', icon: LifeBuoy, desc: 'FAQs & support' },
+      { title: 'Resource Library', href: '/resources', icon: BookOpen, desc: 'Guides, ebooks, templates' },
+      { title: 'Documentation', href: '/docs', icon: FileText, desc: 'Technical reference' },
+      { title: 'Help Center', href: '/help', icon: LifeBuoy, desc: 'FAQs & support' },
     ],
   },
   {
     label: 'Tools',
     items: [
-      { title: 'Free Tools', href: '/tools', icon: Wrench, desc: 'Calculators & utilities' },
-      { title: 'ROI Calculator', href: '/tools#roi', icon: Calculator, desc: 'Estimate your savings' },
-      { title: 'Rubric Builder', href: '/tools#rubric', icon: Shield, desc: 'Design criteria fast' },
-      { title: 'Templates', href: '/tools#templates', icon: FileText, desc: 'Project starter packs' },
+      { title: 'All free tools', href: '/tools', icon: Wrench, desc: 'Calculators & utilities' },
+      { title: 'ROI Calculator', href: '/tools/roi-calculator', icon: Calculator, desc: 'Estimate your savings' },
+      { title: 'Rubric Builder', href: '/tools/rubric-builder', icon: Shield, desc: 'Design criteria fast' },
+      { title: 'Templates', href: '/tools/templates', icon: FileText, desc: 'Project starter packs' },
     ],
   },
 ];
