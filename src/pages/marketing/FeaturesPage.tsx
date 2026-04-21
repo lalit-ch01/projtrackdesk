@@ -1,7 +1,7 @@
 import {
   FolderKanban, CalendarDays, Bell, BarChart3, Bot, Shield,
   Layers, Zap, Users, FileText, Lock, Globe, GitBranch, Workflow,
-  MessageSquare, Sparkles, Database, Mail,
+  MessageSquare, Sparkles, Database, Mail, ArrowRight,
 } from 'lucide-react';
 import PageHero from '@/components/marketing/PageHero';
 import SectionHeading from '@/components/marketing/SectionHeading';
@@ -87,18 +87,35 @@ const FeaturesPage = () => {
         <Link to="/pricing"><Button size="lg" variant="outline">See pricing</Button></Link>
       </PageHero>
 
-      {groups.map((group) => (
-        <section key={group.id} id={group.id} className="border-b border-border py-16 lg:py-24">
-          <div className="container mx-auto px-4 lg:px-6">
-            <SectionHeading title={group.title} description={group.description} align="left" />
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {group.items.map((item, i) => (
-                <FeatureCard key={item.title} {...item} index={i} />
-              ))}
+      {groups.map((group) => {
+        const groupHref: Record<string, string> = {
+          workflows: '/workflows',
+          analytics: '/analytics',
+          ai: '/ai-assistant',
+          notifications: '/notifications',
+          rubrics: '/rubrics-feature',
+          security: '/security',
+        };
+        return (
+          <section key={group.id} id={group.id} className="border-b border-border py-16 lg:py-24">
+            <div className="container mx-auto px-4 lg:px-6">
+              <SectionHeading title={group.title} description={group.description} align="left" />
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {group.items.map((item, i) => (
+                  <FeatureCard key={item.title} {...item} index={i} />
+                ))}
+              </div>
+              {groupHref[group.id] && (
+                <div className="mt-10">
+                  <Link to={groupHref[group.id]}>
+                    <Button variant="outline" className="gap-2">Explore {group.title} <ArrowRight className="h-4 w-4" /></Button>
+                  </Link>
+                </div>
+              )}
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        );
+      })}
 
       <CTASection title="See every feature in action" description="Start a free pilot and explore the full product with your real data." />
     </>
