@@ -54,13 +54,12 @@ const NAV_WIDTH = 320;
 const sidebarBackgroundSx = (isLight: boolean): SxProps<Theme> => ({
   background: isLight
     ? `
-        radial-gradient(120% 80% at 50% 35%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 60%),
-        linear-gradient(160deg, rgba(178,165,154,0.55) 0%, rgba(225,221,218,1) 55%, rgba(210,202,194,0.7) 100%)
+        radial-gradient(140% 90% at 50% 0%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 55%),
+        linear-gradient(180deg, rgba(232,228,223,1) 0%, rgba(238,234,229,1) 50%, rgba(230,224,217,1) 100%)
       `
     : `linear-gradient(160deg, #1a1a1a 0%, #232323 100%)`,
-  backgroundBlendMode: isLight ? 'soft-light, normal' : 'normal',
   borderRight: isLight
-    ? '1px solid rgba(178,165,154,0.25)'
+    ? '1px solid rgba(178,165,154,0.18)'
     : '1px solid rgba(255,255,255,0.06)',
 });
 
